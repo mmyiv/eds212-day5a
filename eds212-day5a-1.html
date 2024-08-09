@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data exploration</title>
+<title>eds212 day5-1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,16 +57,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="eds212-day5a_files/libs/clipboard/clipboard.min.js"></script>
-<script src="eds212-day5a_files/libs/quarto-html/quarto.js"></script>
-<script src="eds212-day5a_files/libs/quarto-html/popper.min.js"></script>
-<script src="eds212-day5a_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="eds212-day5a_files/libs/quarto-html/anchor.min.js"></script>
-<link href="eds212-day5a_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="eds212-day5a_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="eds212-day5a_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="eds212-day5a_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="eds212-day5a_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="eds212-day5a-1_files/libs/clipboard/clipboard.min.js"></script>
+<script src="eds212-day5a-1_files/libs/quarto-html/quarto.js"></script>
+<script src="eds212-day5a-1_files/libs/quarto-html/popper.min.js"></script>
+<script src="eds212-day5a-1_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="eds212-day5a-1_files/libs/quarto-html/anchor.min.js"></script>
+<link href="eds212-day5a-1_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="eds212-day5a-1_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="eds212-day5a-1_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="eds212-day5a-1_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="eds212-day5a-1_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -79,7 +79,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data exploration</h1>
+<h1 class="title">eds212 day5-1</h1>
 </div>
 
 
@@ -100,23 +100,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 28 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="eds212-day5a_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="eds212-day5a-1_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a histogram of character heights, update fill to purple, and border to orange, update code chunk options so only code and output graph appear (no warning/msgs), update axis labels</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>starwars, <span class="fu">aes</span>(<span class="at">x=</span>height)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">fill =</span> <span class="st">"purple"</span>, <span class="at">color=</span><span class="st">"orange"</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x=</span> <span class="st">"Height (cm)"</span>, </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                                                                                              <span class="at">y=</span><span class="st">"count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a histogram of character heights, update fill to purple, and border to orange, update code chunk options so only code and output graph appear (no warning/msgs), update axis labels</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>starwars, <span class="fu">aes</span>(<span class="at">x=</span>height)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">fill =</span> <span class="st">"purple"</span>, <span class="at">color=</span><span class="st">"orange"</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x=</span> <span class="st">"Height (cm)"</span>, </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                                                                                              <span class="at">y=</span><span class="st">"count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 6 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+</div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="eds212-day5a_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" alt="this is some alt text" width="672"></p>
+<p><img src="eds212-day5a-1_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" alt="this is some alt text" width="672"></p>
 <figcaption>This is my figure caption</figcaption>
 </figure>
 </div>
@@ -124,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>‘df$col_name’</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sw_height_mean <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">mean</span>(starwars<span class="sc">$</span>height, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sw_height_mean <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">mean</span>(starwars<span class="sc">$</span>height, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The mean height of all starwars characters is 174.605</p>
 

@@ -1,10 +1,8 @@
 ---
-title: Data exploration
+title: "eds212 day5-1"
+excecute:
+    warning: false
 format: html
-execute:
-  warning: false
-editor_options: 
-  chunk_output_type: console
 ---
 
 ```{r}
@@ -15,7 +13,7 @@ library(tidyverse)
 
 ```{r}
 #| include: false
-#practice more data exploration with star wars data frame - head, tail, and dim
+#practice more data exploration with starwars dataframe - head, tail, and dim
 
 head(starwars, n=10)
 tail(starwars)
