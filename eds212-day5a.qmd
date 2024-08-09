@@ -1,0 +1,57 @@
+---
+title: Data exploration
+format: html
+excecute:
+  warning: false
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| message: false
+library(tidyverse)
+```
+
+
+```{r}
+#| include: false
+#practice more data exploration with starwars dataframe - head, tail, and dim
+
+head(starwars, n=10)
+tail(starwars)
+dim(starwars)
+
+```
+
+```{r}
+#| echo: false
+
+# ggplot (scatter plot, x=height, y=character mass); update color so it changes based on mass value. Update axis labels
+
+ggplot(data=starwars, aes(x=height, y=mass, color = mass)) +geom_point() +
+  labs(x="Height (cm)",
+       y="Mass (kg)",
+       title="character height vs weight")
+```
+
+
+```{r}
+#| fig-cap: "This is my figure caption"
+#| fig-alt: "this is some alt text"
+#| 
+# create a histogram of character heights, update fill to purple, and border to orange, update code chunk options so only code and output graph appear (no warning/msgs), update axis labels
+
+ggplot(data=starwars, aes(x=height)) + geom_histogram(fill = "purple", color="orange") + labs(x= "Height (cm)", 
+                                                                                              y="count")
+```
+
+'df$col_name'
+
+```{r}
+sw_height_mean <- round(mean(starwars$height, na.rm = TRUE), 3)
+```
+
+The mean height of all starwars characters is `r sw_height_mean`
+
+
+
