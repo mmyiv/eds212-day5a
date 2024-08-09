@@ -11,3 +11,10 @@ Hi Michelle
 #code 
 ```
 
+hi yos !!!!!
+
+```{r}
+#more code
+```
+
+hello thank you
